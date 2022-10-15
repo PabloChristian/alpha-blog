@@ -1,6 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @article %>
+by <%= @article.user.username if @article.user %>
 
 <div>
   <%= link_to "Edit this article", edit_article_path(@article) %> |
