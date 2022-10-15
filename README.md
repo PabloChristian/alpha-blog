@@ -1,5 +1,5 @@
 # Alpha Blog
-This is the repository of Alpha Blog, an application based on articles, and made while studying Ruby on Rails Developer Course.
+This is the repository of Alpha Blog, an application based on articles and users, and made while studying Ruby on Rails Developer Course.
 
 # Deployment
 This application is deployed on Heroku: rubyonrails-alpha-blog.herokuapp.com/
