@@ -72,3 +72,5 @@ group :test do
 end
 
 gem "ruby-lsp", "~> 0.3.4", :group => :development
+gem 'bootstrap', '~> 5.2.1'
+gem 'jquery-rails'
