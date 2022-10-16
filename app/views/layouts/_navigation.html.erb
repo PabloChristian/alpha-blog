@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Alpha Blog</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+        <% #= link_to "Article", user_articles_path(current_user) ,class:"nav-link" %>
+        <% if logged_in? %>
+        <li class="nav-item">
+           <a> <%= link_to "Logout", logout_path, method: :delete, class: "nav-link" %> </a>
+        </li>
+
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Profile <%= "Admin" if current_user.admin? %>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to "New Article", new_user_article_path(current_user.id), class: "nav-link" %>
+          <%= link_to "Edit Profile", edit_user_path(current_user), class: "nav-link" %>
+          <%= link_to "View Profile", user_path(current_user.id), class: "nav-link" %>
+          </ul>
+        </li>
+      </ul>
+      <% else %>
+      <li><%= link_to "Login", login_path, class: "nav-link" %></li>
+      <li><%= link_to "Sign up", signup_path, class: "nav-link" %></li>
+   <% end %>
+      <form class="d-flex" method="GET" action='/search'>
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name='query' >
+        <button class="btn btn-secondary" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
