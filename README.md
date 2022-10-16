@@ -1,29 +1,25 @@
-<h1> 
-  File Management
+<h1>
+  Alpha blog
 </h1>
 
 ## 📌 Overview
-A file management system for upload and download file using Ruby on Rails
+A blog application using Ruby on Rails
 
 ## 📑 Demonstrations
 ![Home page](./docs/home.png)
 
 ## 🧾 Features
 <ul>
-	<li>✔ Upload</li>
-	<li>✔ Download</li>
-  <li>✔ View</li>
-  <li>✔ Validations</li>
-  <li>✔ Workers</li>
-  <li>✔ Jobs</li>
+	<li>✔ Login</li>
+	<li>✔ Logout</li>
+  <li>✔ CRUD Articles</li>
 </ul>
 
 
 ## 💻 Technologies
-These are all the technologies and patterns used to develop this application
+These are the technologies and patterns used to develop this application
 - [Ruby](https://www.ruby-lang.org/)
 - [Rails](https://rubyonrails.org/)
-- [Sneakers](https://jondot.github.io/sneakers/)
 
 ## ⚙️ Executing the Project
 To execute the project, follow the steps below:
