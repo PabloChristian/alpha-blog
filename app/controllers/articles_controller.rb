@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   before_action :require_same_user, only: [:edit, :update]
 
   def index
-    @articles=Article.all
+    @articles= Article.paginate(page: params[:page], per_page: 5)
   end
 
   def new
@@ -15,7 +15,7 @@ class ArticlesController < ApplicationController
     @article.user= User.find(session[:user_id])
     respond_to do |format|
       if @article.save
-        format.html { redirect_to user_article_path(current_user,@article), notice: "Atricle was successfully created." }
+        format.html { redirect_to user_article_path(current_user,@article), notice: "Article was successfully created." }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
@@ -28,7 +28,7 @@ class ArticlesController < ApplicationController
   def update
     respond_to do |format|
       if @article.update(article_params)
-        format.html { redirect_to user_article_path(current_user,@article), notice: "Atricle was successfully Updated." }
+        format.html { redirect_to user_article_path(current_user,@article), notice: "Article was successfully Updated." }
       else
         format.html { render :new, status: :unprocessable_entity }
       end

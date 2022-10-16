@@ -126,6 +126,7 @@ GEM
     matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
+    mini_portile2 (2.8.0)
     minitest (5.16.3)
     msgpack (1.6.0)
     net-imap (0.2.3)
@@ -242,6 +243,7 @@ GEM
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    will_paginate (3.1.8)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.6.1)
@@ -258,6 +260,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   jquery-rails
+  mini_portile2
   puma (~> 5.0)
   rails (~> 7.0.4)
   ruby-lsp (~> 0.3.4)
@@ -269,6 +272,7 @@ DEPENDENCIES
   tzinfo-data
   web-console
   webdrivers
+  will_paginate (~> 3.1.0)
 
 RUBY VERSION
    ruby 3.1.2p20

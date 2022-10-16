@@ -1,11 +1,1 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @article %>
-by <%= @article.user.username if @article.user %>
-
-<div>
-  <%= link_to "Edit", edit_article_path(@article) %> |
-  <%= link_to "Back to articles", articles_path %>
-  <br><br>
-  <%= button_to "Delete", @article, method: :delete %>
-</div>
+<%= render 'see' ,obj:@article %>

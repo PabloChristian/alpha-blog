@@ -71,6 +71,8 @@ group :test do
   gem "webdrivers"
 end
 
+gem 'mini_portile2'
 gem "ruby-lsp", "~> 0.3.4", :group => :development
 gem 'bootstrap', '~> 5.2.1'
 gem 'jquery-rails'
+gem 'will_paginate', '~> 3.1.0'

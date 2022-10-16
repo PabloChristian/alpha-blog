@@ -1,8 +1,31 @@
-# Alpha Blog
-This is the repository of Alpha Blog, an application based on articles and usernames, and made while studying Ruby on Rails Developer Course on Udemy.
+<h1> 
+  File Management
+</h1>
 
-# Deployment
-This application is deployed on Heroku: rubyonrails-alpha-blog.herokuapp.com/
+## 📌 Overview
+A file management system for upload and download file using Ruby on Rails
 
-# Start Local
-To start the application local, type "rails server" and then open browser and access the URL "http://127.0.0.1:3000"
+## 📑 Demonstrations
+![Home page](./docs/home.png)
+
+## 🧾 Features
+<ul>
+	<li>✔ Upload</li>
+	<li>✔ Download</li>
+  <li>✔ View</li>
+  <li>✔ Validations</li>
+  <li>✔ Workers</li>
+  <li>✔ Jobs</li>
+</ul>
+
+
+## 💻 Technologies
+These are all the technologies and patterns used to develop this application
+- [Ruby](https://www.ruby-lang.org/)
+- [Rails](https://rubyonrails.org/)
+- [Sneakers](https://jondot.github.io/sneakers/)
+
+## ⚙️ Executing the Project
+To execute the project, follow the steps below:
+1. To start the application local, type "rails server".
+2. open browser and access the URL "http://127.0.0.1:3000".
