@@ -1,12 +1,43 @@
-<div id="<%= dom_id article %>">
-  <p>
-    <strong>Title:</strong>
-    <%= article.title %>
-  </p>
+<% obj.each do |article| %>
 
-  <p>
-    <strong>Description:</strong>
-    <%= article.description %>
-  </p>
+    <div class="row">
 
-</div>
+    <div class="col-xs-8 col-xs-offset-2">
+
+    <div class="well well-lg">
+
+    <div class="article-title">
+
+    <%= link_to article.title, user_article_path(current_user,article) %>
+
+    </div>
+
+    <div class="article-body">
+
+    <%= truncate(article.description, length: 100) %>
+    <small>Created by: <%= article.user.username if article.user%>,
+
+<%= time_ago_in_words(article.created_at) %> ago,
+
+last updated: <%= time_ago_in_words(article.updated_at) %> ago</small>
+
+    </div>
+
+    <div class="article-actions">
+
+<% if logged_in? && (current_user == article.user ) %>
+    <%= link_to "View", user_article_path(current_user,article), class: "btn btn-xs btn-success" %>
+    <%= link_to "Edit",
+     edit_user_article_path(current_user,article), class: "btn btn-xs btn-primary" %>
+    <%= link_to "Delete", user_article_path(current_user,article), method: :delete,
+                  data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }  ,class: "btn btn-xs btn-danger"  %>
+<% end %>
+    </div>
+
+    </div>
+
+    </div>
+
+    </div>
+
+<% end %>

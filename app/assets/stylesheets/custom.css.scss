@@ -18,12 +18,13 @@
     justify-content: center;
     align-items: center;
 }
+
 .jumbotron {
     background-image: url('blog.jpg');
-    background-size: cover;
     height: 550px;
 
 }
+
 .jumbotron  h1{
     color: black;
     text-align: center;
@@ -31,6 +32,7 @@
     letter-spacing: -1px;
     font-weight:900 ;
 }
+
 .btn-xlarge {
     font-size: 1.7em;
     background-color: black;

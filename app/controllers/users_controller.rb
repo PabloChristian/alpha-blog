@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         session[:user_id] = @user.id
-        format.html { redirect_to @user, notice: "Welcome to Alphablog #{@user.username}" }
+        format.html { redirect_to @user, notice: "Welcome user: #{@user.username}" }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
@@ -56,7 +56,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:id, :username, :email, :password)
+    params.require(:user).permit(:id, :username, :email, :password_digest)
   end
 
   def require_same_user
