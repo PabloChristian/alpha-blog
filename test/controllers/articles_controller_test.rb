@@ -24,17 +24,17 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should show article" do
-    get article_url(@article)
+    get show(@article)
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_article_url(@article)
+    get update(@article)
     assert_response :success
   end
 
   test "should update article" do
-    patch article_url(@article), params: { article: { description: @article.description, string: @article.string, title: @article.title } }
+    patch update(@article), params: { article: { description: @article.description, string: @article.string, title: @article.title } }
     assert_redirected_to article_url(@article)
   end
 
